@@ -4,11 +4,9 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
-// parse incoming string or array data
+
 app.use(express.urlencoded({ extended: true }));
-// parse incoming JSON data
 app.use(express.json());
-// tells express where the static assests are
 app.use(express.static("public"));
 
 app.get("/notes", function (req, res) {
