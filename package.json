@@ -1,11 +1,15 @@
 {
+  "homepage": "http://stepheff1994.github.io/note-taker-challenge",
   "name": "note-taker",
   "version": "1.0.0",
   "description": "## Table of Contents - [Description](#description) - [User Story](#user-story) - [Acceptance Criteria](#acceptance-criteria) - [Installation](#installation) ## Description :mag: This is an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file. ## User Story AS A small business owner I WANT to be able to write and save notes SO THAT I can organize my thoughts and keep track of tasks I need to complete.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js --watch"
+    "start": "nodemon server.js --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+    
   },
   "author": "",
   "license": "ISC",
@@ -14,13 +18,15 @@
     "nodemon": "^2.0.7",
     "uniqid": "^5.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stepheff1994/note-taker-challenge.git"
   },
   "bugs": {
     "url": "https://github.com/stepheff1994/note-taker-challenge/issues"
-  },
-  "homepage": "https://github.com/stepheff1994/note-taker-challenge#readme"
+  }
+  
 }
